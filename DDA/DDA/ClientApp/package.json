@@ -16,7 +16,7 @@
     "rimraf": "^2.6.2"
   },
   "engines": {
-    "node": "8.9.4"
+    "node": "12.18.0"
   },
   "devDependencies": {
     "ajv": "^6.9.1",
