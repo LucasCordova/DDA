@@ -15,9 +15,6 @@
     "reactstrap": "^8.5.1",
     "rimraf": "^2.6.2"
   },
-  "engines": {
-    "node": "12.18.0" 
-  },
   "devDependencies": {
     "ajv": "^6.12.4",
     "cross-env": "^5.2.0",
