@@ -28,14 +28,8 @@ namespace DDA
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            if (Configuration["DDADB_Azure_Dev"] == null)
-            {
-                services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("DDADB_Azure_Dev"));
-            }
-            else
-            {
-                services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DDADB_Azure_Dev"]));
-            }
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("DDADB_Azure_Dev"));
+            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["DDADB_Azure_Dev"]));
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
